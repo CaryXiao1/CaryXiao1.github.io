@@ -1,38 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+/* wrapper div */
 .App {
-  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/* classes for the side bar and its elements */
+#side-bar {
+  background-image: linear-gradient(to top left, #7fcd9f, #658bbf);
+  position: fixed;
+  float: left;
+  background-color: grey;
+  padding: 0;
+  height: 100%;
+  width: 15vw;
+  max-width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#side-main {
+  height: 100%;
+  float: left;
+  width: 100%; /* is set to calc(100% - 45px) when size < 1024px */
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+} 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#side-arrow {
+  float: right;
+  display: none; /* is set to flex when size is under 1024px */
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 45px;
+  height: 100vh;
+}
+
+#side-logo {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+  margin-right: 11.25%;
+  
+  margin-top: 2%;
+  font-weight: 800;
+  font-size: min(calc(5px + 2vw), 32px);
   color: white;
+  text-decoration: underline;
+  text-decoration-color: #a0e281;
+  text-decoration-thickness: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+#side-logo:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.side-label {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 600;
+  width: 100%;
+  padding: 5%;
+  background-color: transparent;
+  text-align: left; 
+  color: white;
+  border: 0;  
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.side-label:hover {
+  background-color: rgba(255,255,255,0.25);
+  transition: 0.2s;
+}
+
+.group {
+  margin-bottom: 5%;
+}
+
+button.section {
+  font-size: min(calc(7px + 1vw), 22px);
+  margin-left: 5%;
+}
+button.subsection {
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 10%;
+  font-size: min(calc(5px + .67vw), 16px);
+  font-weight: 300;
+}
+
+
+
+/* classes for side scrollbar */
+/* width */
+#side-main::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+#side-main::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+#side-main::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#side-main::-webkit-scrollbar-thumb:hover {
+  background: #444  ; 
+}
+
+
+
+/* wrapper for top-right social media icons */
+#socials {
+  position: absolute;
+  /* right: 4%; */
+  right: max(calc((85vw - 1125px) / 2), 15px)
+}
+
+#socials > * {
+  margin-left: 12px;
+}
+
+
+
+/* wrapper for non-side panel */
+#main-body {
+  margin-top: 20px;
+  width: 85%;
+  float: right;
+  text-align: left;
+}
+
+/* wrapper div that enables centering of all cards in wide browser windows */
+#cards {
+  width: 100%;
+  max-width: 1125px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  padding-left: 4%;
+  padding-right: 2%;
+  width: 92%;
+  font-size: min(calc(5px + .5vw), 14px);
+  display: flex;
+  margin-bottom: 2%;
+  /* border: 1px solid black; */
+}
+
+.p-left {
+  padding-left: 4%;
+}
+
+.p-right {
+  padding-right: 4%;
+}
+
+hr.divide-card {
+  border-top: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  color: black;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 2%;
+}
+
+
+.card-minor {
+  width: 40%;
+  text-align: right;
+  /* border: 1px solid blue; */
+  
+}
+
+.card-major {
+  width: 60%;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* border: 1px solid red; */
+}
+
+#img-text {
+  font-weight: 400;
+  width: calc(75px + 25vw);
+  margin-left: 2%;
+  font-size: min(calc(7px + 1vw), 22px);
+  justify-content: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 175px;
+}
+
+.section-header {
+  font-size: min(calc(10px + 2vw), 36px);
+  margin-left: 4%;
+  font-weight: 800;
+  color: white;
+  -webkit-text-stroke: 1px #a0e281;
+}
+
+
+
+/* other style definitions */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: min(calc(5px + 1vw), 15px);
+}
+
+h2.minor {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 300;
+}
+
+.no-btn {
+  background-color: transparent;
+  height: 100%;
+  border: 0;
+  width: 100%;
+}
+.no-btn:hover {
+  background-color: rgba(255,255,255,0.25);
+  transition: 0.2s;
+}
+
+a {
+  color: #497abe;
+  width: 100%;
+  font-weight: 600;
+  font-size: min(calc(5px + 1.25vw), 24px);
+}
+
+a:hover {
+  color: black;
+}
+
+a.none {
+  color: black;
+  padding-right: 0;
+}
+
+a.h2 { /* class used for the projects so that it looks like h2 but can be licked on */
+  color: #497abe;
+  font-size: min(calc(5px + .5vw), 14px);
+}
+
+
+.App-logo {
+  height: min(calc(50px + 12.5vw), 200px);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: white; 
+}
+/* add toggling ability for the side bar  */
+@media only screen and (max-width: 900px) {
+  #side-bar { 
+      width: 250px;
+      /* display: none;*/
+      margin-left: -155px;
   }
-  to {
-    transform: rotate(360deg);
+  #side-main {
+    width: calc(100% - 45px);
+  }
+  #side-logo {
+    font-size: 28px;
+    margin-right: 10px;
+  } 
+  #side-arrow {
+    display: flex;
+  }
+  button.section {
+    font-size: 20px;
+    padding-right: 5%; 
+    padding-left: 5%;
+  }
+  button.subsection {
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 10%;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  /* */
+  #side-bar-arrow {
+    display: fixed;
+  }
+  #main-body {
+    width: calc(100vw - 75px);
+    padding-left: 4%;
+    padding-right: 2%;
+  }
+
+  .section-header {
+    font-size: 26px;
+  }
+
+  .App-logo {
+    margin: 0
+  }
+  
+  .card {
+    display: block;
+    font-size: 12px;
+    padding-bottom: 65px;
+  }
+
+  img {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
+  }
+
+  .card-major {
+    width: 100%;
+  }
+
+  .card-minor {
+    width: 100%;
+    display: flex;
+  }
+  
+  /* used to negate the 'padding-bottom' in a standard card. */
+  .mobile-nospacing {
+    padding-bottom: 10px;
+
+  }
+  
+  #main-picture {
+    display: flex;
+    padding-bottom: 5px;
+  }
+  
+  .p-left {
+    padding: 0
+  }
+
+  h2 {
+    padding-bottom: 0;
+    margin-bottom: 5px;
+  }
+  p {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  h2.minor {
+    padding-top: 5px;
+    padding-bottom: 7px;
+    margin: 0;
+    text-align: left;
+    float: left;
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 16px;
+    padding-right: 20px;
+  }
+
+  a.h2 {
+    font-size: 12px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  #socials > * {
+    margin-left: 7px;
   }
 }
