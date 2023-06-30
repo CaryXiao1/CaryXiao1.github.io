@@ -268,7 +268,9 @@ function App() {
                             <p>
                               I help to improve the experience for Oppia developers by fixing
                               issues and adding features to the Pull Request (PR) testing
-                              framework. Navigating large codebases and 
+                              framework. Currently, I focus on modifying E2E GitHub workflows,
+                              enabling screen recording and build environment re-creation
+                              on Pull Request tests.
                             </p>
                             </>
                           } />
@@ -286,22 +288,30 @@ function App() {
                           text={
                             <>
                             <p>
-                              I will lead sections for{" "}
+                              I lead sections for{" "}
                               <a
                                 className="h2"
-                                href="https://web.stanford.edu/class/cs106a/"
+                                href="https://web.stanford.edu/class/cs106b/"
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                CS 106A
-                              </a>{" "}
-                              in Autumn 2022, teaching students about core concepts and
-                              practices of programming in Python.
-                            </p>
-                            <p>
-                              I will also help troubleshoot student code and grade assignments
-                              every week, and twice during the quarter, I will aid in grading
-                              the midterm or final for the class.
+                                CS 106B
+                              </a>
+                              , enabling students to understand concepts like Recursive Backtracking 
+                              and Pointers. I also aid students in LaIR Office Hours, grade all sectionees'
+                              assignments, and help to proctor/grade the class' exams. 
+                              <p>
+                              Furthermore, as a
+                              veteran SL I teach as one of the three primary instructors for {" "}
+                              <a
+                                className="h2"
+                                href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=cs198b&collapse="
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                CS 198B
+                              </a>, a class designed to teach section leaders how to Section Lead for CS 106B.
+                              </p>
                             </p>
                             </>
                           } />

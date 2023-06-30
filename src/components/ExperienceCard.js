@@ -13,7 +13,7 @@ const ExperienceCard = ({id, title, place, date, innerWidth, text}) => {
       )
     }
     return (
-      <div className="card mobile-nospacing" id="7">
+      <div className="card mobile-nospacing" id={id}>
             <div className="card-major p-right">
               {title}
               {text}
