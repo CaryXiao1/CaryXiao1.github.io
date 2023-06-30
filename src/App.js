@@ -5,6 +5,7 @@ import fsoc from "./img/fsoc.JPG";
 import madsa from "./img/madsa.png";
 import workout from "./img/workout-app.PNG";
 import roc from "./img/roc-results.png";
+import cs231n from "./img/231n-final-cover.png";
 
 import ProjectCard from "./components/ProjectCard";
 import ExperienceCard from "./components/ExperienceCard";
@@ -15,7 +16,7 @@ function App() {
   const {width} = useWindowDimensions()
 
   return (
-    <div className="App" id="0">
+    <div className="App" id="top">
       <SideBar innerWidth={width}/>
       <div id="main-body">
         <div id='cards'>
@@ -49,16 +50,59 @@ function App() {
             <img src={bust} className="App-logo" alt="logo" />
             <h3 id="img-text">
               Hey There! <br />
-              I'm Cary, a Computer Science major at Stanford University. I enjoy
-              working on projects that can help others.
+              I'm Cary, a Stanford CS major from Tuscaloosa, Alabama. 
+              I like to work on systems that inform and inspire others.
             </h3>
           </div>
           <hr className="divide-card" />
-          <h1 className="section-header" id="1">
+          <h1 className="section-header" id="projects">
             projects
           </h1>
 
-          <ProjectCard id='2' img={workout} img_alt={'Screenshot of workout app with sample information inputted.'} img_float_left={true} innerWidth={width} text={
+          <ProjectCard id='cs231n' img={cs231n} img_alt={'Screenshot of workout app with sample information inputted.'} img_float_left={true} innerWidth={width} text={
+            <>
+            <a
+                className="h2"
+                href="https://drive.google.com/file/d/1mK1hqDwvQIY1cOfF9RQqQErwT4QRP4KF/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>STAC: Synthesizing Structure and Tone in Image-to-ASCII Art Conversion</h2>
+              </a>
+              <p>
+                For our Deep Learning for Computer Vision (CS 231N) final project, a partner 
+                and I built a Convolutional Neural Network (CNN)-powered 
+                pipeline to create arbitrary images into ASCII art. Unlike
+                previous approaches, we combined the brightness and structural
+                elements of the original image to create ASCII art that generally
+                better represented the original image than existing baseline methods. 
+              </p>
+              <p>
+                You can compare the outputs
+                {" "}
+                  <a
+                    className="h2"
+                    href="https://forms.gle/mnUiMHnwxeUiaDzv6"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    here
+                  </a>
+                  {", "} where Style 3 is our approach, and you can see our final project report 
+                  {" "}
+                  <a
+                    className="h2"
+                    href="https://drive.google.com/file/d/1mK1hqDwvQIY1cOfF9RQqQErwT4QRP4KF/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    here
+                  </a>.
+              </p>
+            </>
+          } />
+
+          <ProjectCard id='workout' img={workout} img_alt={'Screenshot of workout app with sample information inputted.'} img_float_left={false} innerWidth={width} text={
             <>
             <a
                 className="h2"
@@ -99,7 +143,8 @@ function App() {
               </p>
             </>
           } />
-          <ProjectCard id='3' img={roc} img_alt={'Resulting ROC Curves from Patient-GAT model testing.'} img_float_left={false} innerWidth={width} text={
+
+          <ProjectCard id='patient' img={roc} img_alt={'Resulting ROC Curves from Patient-GAT model testing.'} img_float_left={true} innerWidth={width} text={
             <>
             <a
                 className="h2"
@@ -141,7 +186,8 @@ function App() {
               </p>
             </>
           } />
-          <ProjectCard id='4' img={fsoc} img_alt={'Front and back of built FSOC devices, placed on a dirt ground filled with leaves.'} img_float_left={true} innerWidth={width} text={
+
+          <ProjectCard id='fsoc' img={fsoc} img_alt={'Front and back of built FSOC devices, placed on a dirt ground filled with leaves.'} img_float_left={false} innerWidth={width} text={
             <>
             <a
                 className="h2"
@@ -176,7 +222,8 @@ function App() {
               </p>
             </>
           } />
-          <ProjectCard id='5' img={madsa} img_alt={'Screenshot of MADSA Application.'} img_float_left={false} innerWidth={width} extra_classes={'mobile-nospacing'} text={
+
+          <ProjectCard id='madsa' img={madsa} img_alt={'Screenshot of MADSA Application.'} img_float_left={true} innerWidth={width} extra_classes={'mobile-nospacing'} text={
             <>
             <a
                 className="h2"
@@ -202,11 +249,11 @@ function App() {
             </>
           } />
           <hr className="divide-card" />
-          <h1 className="section-header" id="6">
+          <h1 className="section-header" id="experience">
             experience
           </h1>
           
-          <ExperienceCard id='7' 
+          <ExperienceCard id='oppia' 
                           title={<a
                                     className="h2"
                                     href="https://oppia.org"
@@ -221,23 +268,18 @@ function App() {
                             <p>
                               I help to improve the experience for Oppia developers by fixing
                               issues and adding features to the Pull Request (PR) testing
-                              framework. 
-                            </p>
-                            <p>
-                              I will also help troubleshoot student code and grade assignments
-                              every week, and twice during the quarter, I will aid in grading
-                              the midterm or final for the class.
+                              framework. Navigating large codebases and 
                             </p>
                             </>
                           } />
 
-          <ExperienceCard id='7' 
+          <ExperienceCard id='cs198' 
                           title={<a
                                     className="h2"
                                     href="https://cs198.stanford.edu/cs198/ProgramStructure.aspx"
                                     target="_blank"
                                     rel="noreferrer"
-                                  ><h2>CS 198 Instructor for Programming Methodologies</h2></a>}
+                                  ><h2>Section Leader for Programming Abstractions (CS 106B)</h2></a>}
                           place='Stanford University'
                           date='September 2022 - Present'
                           innerWidth={width}
@@ -263,7 +305,7 @@ function App() {
                             </p>
                             </>
                           } />
-          <ExperienceCard id='8'
+          <ExperienceCard id='iupui'
                           title={<a
                             className="h2"
                             href="https://et.iupui.edu/departments/cigt/research/reu/"
@@ -290,7 +332,7 @@ function App() {
               </p>
                             </>
                           } />
-          <ExperienceCard id='9'
+          <ExperienceCard id='dive'
                           title={<a
                             className="h2"
                             href="https://earth.stanford.edu/equitable-transportation-decarbonization"
@@ -319,7 +361,7 @@ function App() {
               </p>
                             </>
                           } />
-          <ExperienceCard id='10'
+          <ExperienceCard id='aims'
                           title={<h2>Course Instructor, Adventures in Math and Science (AIMS)</h2>}
                           place='Alabama School of Math and Science'
                           date='June 2021 - July 2021'
@@ -356,12 +398,12 @@ function App() {
                           } />
 
           <hr className="divide-card" />
-          <h1 className="section-header" id="11">
+          <h1 className="section-header" id="help">
             helpful links
           </h1>
           <div className="card mobile-nospacing">
             <a
-              id="12"
+              id="resume"
               href="https://drive.google.com/drive/folders/1XxXDQGibDqgMzAy91GpN_wavApQQd4SR?usp=sharing"
               target="_blank"
               rel="noreferrer"
@@ -370,7 +412,7 @@ function App() {
             </a>
             {" "}
             <a
-              id="13"
+              id="publications"
               href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C15&q=%22Cary+Xiao%22&btnG=&oq=%22cary+"
               target="_blank"
               rel="noreferrer"
@@ -380,7 +422,7 @@ function App() {
             </a>
             {" "}
             <a
-              id="14"
+              id="old_website"
               href="https://caryxiao.com/old-website/"
               target="_blank"
               rel="noreferrer"

@@ -7,7 +7,7 @@ const SideBar = (innerWidth) => {
   
 
   const goToTop = () => {
-    document.getElementById("0").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("top").scrollIntoView({ behavior: "smooth" });
   }
 
   const toggleMenu = (value) => {
@@ -28,44 +28,50 @@ const SideBar = (innerWidth) => {
             cary xiao
           </button>
           <div className="group">
-            <SideButton text="projects" section={true} idScroll="1" />
-            <SideButton text="Workout App" section={false} idScroll="2" />
-            <SideButton text="Patient-GAT" section={false} idScroll="3" />
+            <SideButton text="projects" section={true} idScroll="projects" />
+            <SideButton text="Image to ASCII" section={false} idScroll="cs231n" />
+            <SideButton text="Workout App" section={false} idScroll="workout" />
+            <SideButton text="Patient-GAT" section={false} idScroll="patient" />
             <SideButton
               text="ML Filters for FSOC"
               section={false}
-              idScroll="4"
+              idScroll="fsoc"
             />
-            <SideButton text="MADSA" section={false} idScroll="5" />
+            <SideButton text="MADSA" section={false} idScroll="madsa" />
           </div>
 
           <div className="group">
-            <SideButton text="experience" section={true} idScroll="6" />
+            <SideButton text="experience" section={true} idScroll="experience" />
             <SideButton
-              text="CS 198 Course Instructor"
+              text="Oppia DevOps Contributor"
               section={false}
-              idScroll="7"
+              idScroll="oppia"
+            />
+            <SideButton
+              text="CS 106B Section Leader"
+              section={false}
+              idScroll="cs198"
             />
             <SideButton
               text="NSF REU Researcher, IUPUI"
               section={false}
-              idScroll="8"
+              idScroll="iupui"
             />
             <SideButton
               text="DIVE Research Assistant"
               section={false}
-              idScroll="9"
+              idScroll="dive"
             />
             <SideButton
               text="Course Instructor, AIMS"
               section={false}
-              idScroll="10"
+              idScroll="aims"
             />
           </div>
           <div className="group">
-            <SideButton text="helpful links" section={true} idScroll="11" />
-            <SideButton text="Resume" section={false} idScroll="12" />
-            <SideButton text="Publications" section={false} idScroll="13" />
+            <SideButton text="helpful links" section={true} idScroll="help" />
+            <SideButton text="Resume" section={false} idScroll="resume" />
+            <SideButton text="Publications" section={false} idScroll="publications" />
           </div>
         </div>
         <div id="side-arrow">
