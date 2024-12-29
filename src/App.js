@@ -6,6 +6,7 @@ import madsa from "./img/madsa.png";
 import workout from "./img/workout-app.PNG";
 import roc from "./img/roc-results.png";
 import cs231n from "./img/231n-final-cover.png";
+import lightsaber from "./img/lightsaber.png"
 
 import ProjectCard from "./components/ProjectCard";
 import ExperienceCard from "./components/ExperienceCard";
@@ -50,14 +51,43 @@ function App() {
             <img src={bust} className="App-logo" alt="logo" />
             <h3 id="img-text">
               Hey There! <br />
-              I'm Cary, a Stanford CS major from Tuscaloosa, Alabama. 
-              I like to work on systems that inform and inspire others.
+              I'm Cary, a Stanford CS major (c/o '25) and CS master's from Tuscaloosa, Alabama. 
+              I love building things and making coffee.
             </h3>
           </div>
           <hr className="divide-card" />
           <h1 className="section-header" id="projects">
             projects
           </h1>
+
+          <ProjectCard id='lightsaber' img={lightsaber} img_alt={'Picture of lightsaber'} img_float_left={false} innerWidth={width} text={
+            <>
+            <a
+                className="h2"
+                href="https://github.com/CaryXiao1/cs140e-lightsaber"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2>Wirelessly Bootloaded Lightsaber</h2>
+              </a>
+              <p>
+                As the final project for my Operating Systems implementation 
+                class, a partner and I designed and fabricated a fabricator using
+                a bare-metal Raspbery Pi. Aside from sourcing materials and 
+                designing the hilt, we implemented context switching, added 
+                Pulse-Width Modulation, and programmed gyroscope drivers to
+                play sounds and change the light intensity based on the strength
+                of a swing.
+              </p>
+              <p>
+                I was also responsible for creating a networked bootloader, which 
+                sent code via UART to a second r/pi that then wirelessly relayed 
+                arbitrary program code to the lightsaber. This sped up development
+                by allowing us to quickly change the the code running on the sword
+                without needing to open the hilt.
+              </p>
+            </>
+          } />
 
           <ProjectCard id='cs231n' img={cs231n} img_alt={'Screenshot of workout app with sample information inputted.'} img_float_left={true} innerWidth={width} text={
             <>
@@ -173,14 +203,14 @@ function App() {
                 models in terms of Area Under AUC Curve (AUC).
               </p>
               <p>
-                The paper for this project has been submitted to the{" "}
+                I received first author in the resulting paper, published in the {" "}
                 <a
                   className="h2"
-                  href="http://ieeebibm.org/BIBM2022/"
+                  href="https://www.sigapp.org/sac/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  2022 BIBM conference
+                  ACM 2023 Symposim on Applied Computing (SAC).
                 </a>
                 .
               </p>
@@ -252,25 +282,98 @@ function App() {
           <h1 className="section-header" id="experience">
             experience
           </h1>
-          
+          <ExperienceCard id='cs111' 
+                          title={<a
+                                    className="h2"
+                                    href="https://cs198.stanford.edu/cs198/ProgramStructure.aspx"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  ><h2>Graduate Teaching Assistant </h2></a>}
+                          place='Stanford Dept. of Computer Science'
+                          date='Sept. 2024 - Present'
+                          innerWidth={width}
+                          text={
+                            <>
+                            <p>
+                              As a graduate TA for {" "}
+                              <a
+                                className="h2"
+                                href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=cs111&collapse="
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Operating Systems (CS 111)
+                              </a>
+                              , I help students learn about Unix V6 filesystems, multithreading, 
+                              crash recovery, and other operating system concepts by grading assignments/exams, 
+                              leading sections, and hosting office hours.
+                            </p>
+                            </>
+                          } />
+          <ExperienceCard id='yamaha' 
+                          title={<a
+                                    className="h2"
+                                    href="https://cs198.stanford.edu/cs198/ProgramStructure.aspx"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  ><h2>Software Engineer Intern</h2></a>}
+                          place='Yamaha Corporation'
+                          date='Jun. 2024 - Aug. 2024'
+                          innerWidth={width}
+                          text={
+                            <>
+                            <p>
+                              In Yamaha Corporation's headquarters in Hamamatsu, Japan, I developed
+                              a Python and OpenCV-based long-term testing application for the {" "}
+                              <a
+                                className="h2"
+                                href="https://usa.yamaha.com/products/unified_communications/video_collaboration/cs-500/index.html"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Yamaha CS-500 and CS-800 conference cameras
+                              </a>
+                              , which would monitor the device's microphone and video quality over time.
+                              <p>
+                              Using my application, I compared the quality of different firmware versions and
+                              was able to find a previously-unknown frame skipping issue in the camera, 
+                              achieving the "most beneficial results" by any intern in the department
+                              in the past ten years.
+                              </p>
+                            </p>
+                            </>
+                          } />
           <ExperienceCard id='oppia' 
                           title={<a
                                     className="h2"
                                     href="https://oppia.org"
                                     target="_blank"
                                     rel="noreferrer"
-                                  ><h2>DevOps Contributor</h2></a>}
+                                  ><h2>Developer Workflow Contributor</h2></a>}
                           place='Oppia Foundation'
-                          date='February 2023 - Present'
+                          date='Feb. 2023 - Oct. 2023'
                           innerWidth={width}
                           text={
                             <>
                             <p>
-                              I help to improve the experience for Oppia developers by fixing
+                              I helped to improve the experience for Oppia developers by fixing
                               issues and adding features to the Pull Request (PR) testing
-                              framework. Currently, I focus on modifying E2E GitHub workflows,
-                              enabling screen recording and build environment re-creation
-                              on Pull Request tests.
+                              framework. You can find all my merged PRs {" "}
+                              <a
+                                className="h2"
+                                href="https://github.com/oppia/oppia/pulls?q=is%3Apr+is%3Amerged+author%3ACaryXiao1"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                here
+                              </a>.
+                            </p>
+                            <p>
+                              Among other features, I enabled the Oppia build artifact to be re-constructed
+                              if an automated PR test is re-run more than 24 hours after it was initially run,
+                              significantly reducing the need to re-run all tests in a PR. I also added Screen
+                              Recording to our Node.js Puppeteer scripts, making it significantly easier to
+                              debug flakes in our Puppeteer script.
                             </p>
                             </>
                           } />
@@ -281,14 +384,14 @@ function App() {
                                     href="https://cs198.stanford.edu/cs198/ProgramStructure.aspx"
                                     target="_blank"
                                     rel="noreferrer"
-                                  ><h2>Section Leader for Programming Abstractions (CS 106B)</h2></a>}
-                          place='Stanford University'
-                          date='September 2022 - Present'
+                                  ><h2>Undergraduate Teaching Assistant </h2></a>}
+                          place='Stanford Dept. of Computer Science'
+                          date='Sept. 2022 - Dec. 2023'
                           innerWidth={width}
                           text={
                             <>
                             <p>
-                              I lead sections for{" "}
+                              I led sections for{" "}
                               <a
                                 className="h2"
                                 href="https://web.stanford.edu/class/cs106b/"
@@ -302,7 +405,7 @@ function App() {
                               assignments, and help to proctor/grade the class' exams. 
                               <p>
                               Furthermore, as a
-                              veteran SL I teach as one of the three primary instructors for {" "}
+                              veteran SL, I taught as one of the three primary instructors for {" "}
                               <a
                                 className="h2"
                                 href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=cs198b&collapse="
@@ -322,9 +425,9 @@ function App() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <h2>NSF REU Researcher</h2>
+                            <h2>Data Science REU Researcher</h2>
                           </a>}
-                          place='IUPUI'
+                          place='Indiana University-Purdue University Indianapolis'
                           date='June 2022 - August 2022'
                           innerWidth={width}
                           text={
@@ -339,70 +442,6 @@ function App() {
                 As my primary research project, I worked with a partner to predict
                 health outcomes using Graph Attention Mechanisms. For more
                 information, please see 'Patient-GAT' under Projects.
-              </p>
-                            </>
-                          } />
-          <ExperienceCard id='dive'
-                          title={<a
-                            className="h2"
-                            href="https://earth.stanford.edu/equitable-transportation-decarbonization"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <h2>
-                              Research Assistant, Decommisioning ICE Vehicles (DIVE) Group
-                            </h2>
-                          </a>}
-                          place='Stanford University'
-                          date='October 2021 - January 2022'
-                          innerWidth={width}
-                          text={
-                            <>
-                            <p>
-                I used Python to call Google Maps APIs and gather average
-                rush-hour commute times on critical roads in Sonoma County, CA.
-              </p>
-              <p>
-                I also processed the data to find out how the commute times on a
-                given road changed over time on a given day, allowing for
-                potential future analysis of this data to help estimate the number
-                of cars on sections of the road and to compare this data to
-                pollution levels in Sonoma County.{" "}
-              </p>
-                            </>
-                          } />
-          <ExperienceCard id='aims'
-                          title={<h2>Course Instructor, Adventures in Math and Science (AIMS)</h2>}
-                          place='Alabama School of Math and Science'
-                          date='June 2021 - July 2021'
-                          innerWidth={width}
-                          text={
-                            <>
-                            <p>
-                Throughout June and July, I repeatedly taught two weeklong virtual
-                classes on 3D Printing and making devices using Arduinos to middle
-                and high school students, giving hour-long introductory lectures
-                and helping students troubleshoot problems with their circuits and
-                arduino code.
-              </p>
-              <p>
-                Aside from helping summer-time students in the ASMS-hosted summer
-                camps, I also taught these classes to disadvantaged students as a
-                partnership between ASMS and the Boy's and Girl's Club of Alabama.
-              </p>
-              <p>
-                <em>
-                  Note: The AIMS Summer Camp has since been replaced with the{" "}
-                  <a
-                    className="h2"
-                    href="https://www.asms.net/summer-camps/alabama-stem-leadership-academy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ASMS STEM Leadership Academy
-                  </a>
-                  .
-                </em>
               </p>
                             </>
                           } />
@@ -426,20 +465,10 @@ function App() {
               href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C15&q=%22Cary+Xiao%22&btnG=&oq=%22cary+"
               target="_blank"
               rel="noreferrer"
-            >
-              
+            > 
               publications
             </a>
             {" "}
-            <a
-              id="old_website"
-              href="https://caryxiao.com/old-website/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              
-              old website
-            </a>
           </div>
         </div>
       </div>

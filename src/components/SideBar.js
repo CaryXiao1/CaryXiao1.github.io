@@ -29,6 +29,7 @@ const SideBar = (innerWidth) => {
           </button>
           <div className="group">
             <SideButton text="projects" section={true} idScroll="projects" />
+            <SideButton text="Lightsaber" section={false} idScroll="lightsaber" />
             <SideButton text="Image to ASCII" section={false} idScroll="cs231n" />
             <SideButton text="Workout App" section={false} idScroll="workout" />
             <SideButton text="Patient-GAT" section={false} idScroll="patient" />
@@ -43,30 +44,40 @@ const SideBar = (innerWidth) => {
           <div className="group">
             <SideButton text="experience" section={true} idScroll="experience" />
             <SideButton
-              text="Oppia DevOps Contributor"
+              text="CS 111 Grad TA"
+              section={false}
+              idScroll="cs111"
+            />
+            <SideButton
+              text="Yamaha SWE Intern"
+              section={false}
+              idScroll="yamaha"
+            />
+            <SideButton
+              text="Oppia Dev Workflow Contributor"
               section={false}
               idScroll="oppia"
             />
             <SideButton
-              text="CS 106B Section Leader"
+              text="CS 106B Undergrad TA"
               section={false}
               idScroll="cs198"
             />
             <SideButton
-              text="NSF REU Researcher, IUPUI"
+              text="Data Science REU Researcher"
               section={false}
               idScroll="iupui"
             />
-            <SideButton
+            {/* <SideButton
               text="DIVE Research Assistant"
               section={false}
               idScroll="dive"
-            />
-            <SideButton
+            /> */}
+            {/* <SideButton
               text="Course Instructor, AIMS"
               section={false}
               idScroll="aims"
-            />
+            /> */}
           </div>
           <div className="group">
             <SideButton text="helpful links" section={true} idScroll="help" />
