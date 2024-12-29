@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2380668.css",
-    "main.js": "/static/js/main.d675dd7e.js",
-    "static/js/787.8d028a2b.chunk.js": "/static/js/787.8d028a2b.chunk.js",
+    "main.css": "/static/css/main.c30506d3.css",
+    "main.js": "/static/js/main.714edfe2.js",
+    "static/js/453.1c58250d.chunk.js": "/static/js/453.1c58250d.chunk.js",
     "static/media/fsoc.JPG": "/static/media/fsoc.54faebd33f679abc3ff0.JPG",
     "static/media/231n-final-cover.png": "/static/media/231n-final-cover.d602c6a46ce615975931.png",
     "static/media/main-bust.png": "/static/media/main-bust.10859c4fef1e5c965c42.png",
+    "static/media/lightsaber.png": "/static/media/lightsaber.f53b1e0de1d30e6d7375.png",
     "static/media/madsa.png": "/static/media/madsa.579a792683fccd357ba7.png",
     "static/media/roc-results.png": "/static/media/roc-results.769e732e925f9708f683.png",
     "static/media/workout-app.PNG": "/static/media/workout-app.14d3e5f6d3a4effda9cd.PNG",
     "index.html": "/index.html",
-    "main.f2380668.css.map": "/static/css/main.f2380668.css.map",
-    "main.d675dd7e.js.map": "/static/js/main.d675dd7e.js.map",
-    "787.8d028a2b.chunk.js.map": "/static/js/787.8d028a2b.chunk.js.map"
+    "main.c30506d3.css.map": "/static/css/main.c30506d3.css.map",
+    "main.714edfe2.js.map": "/static/js/main.714edfe2.js.map",
+    "453.1c58250d.chunk.js.map": "/static/js/453.1c58250d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2380668.css",
-    "static/js/main.d675dd7e.js"
+    "static/css/main.c30506d3.css",
+    "static/js/main.714edfe2.js"
   ]
 }
